@@ -1,0 +1,11 @@
+version: '0.2'
+env:
+  parameter-store:
+    SSM_PARAMETER: "/codebuild-locale-error-demo/parameter"
+  variables:
+    LC_ALL: de_DE.UTF-8
+phases:
+  build:
+    commands:
+      - echo "$SSM_PARAMETER"
+
